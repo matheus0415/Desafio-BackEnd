@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoRent.Api", "MotoRent.Api\MotoRent.Api.csproj", "{0347BF20-5D9B-453F-8EB2-56FE193E61A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoRent.Application", "MotoRent.Application\MotoRent.Application.csproj", "{52426620-84C5-43CB-8471-55869B6C22C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoRent.Domain", "MotoRent.Domain\MotoRent.Domain.csproj", "{F2B39985-62B1-41CB-97E5-1AF85C16B606}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoRent.Infrastructure", "MotoRent.Infrastructure\MotoRent.Infrastructure.csproj", "{06B2EDBC-5C5A-4CF6-8270-8A3D82E904EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoRent.Tests", "MotoRent.Tests\MotoRent.Tests.csproj", "{5990C6F2-CE05-4061-B64E-B161B4DE6AB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0347BF20-5D9B-453F-8EB2-56FE193E61A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0347BF20-5D9B-453F-8EB2-56FE193E61A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0347BF20-5D9B-453F-8EB2-56FE193E61A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0347BF20-5D9B-453F-8EB2-56FE193E61A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52426620-84C5-43CB-8471-55869B6C22C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52426620-84C5-43CB-8471-55869B6C22C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52426620-84C5-43CB-8471-55869B6C22C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52426620-84C5-43CB-8471-55869B6C22C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B39985-62B1-41CB-97E5-1AF85C16B606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B39985-62B1-41CB-97E5-1AF85C16B606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B39985-62B1-41CB-97E5-1AF85C16B606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B39985-62B1-41CB-97E5-1AF85C16B606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B2EDBC-5C5A-4CF6-8270-8A3D82E904EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B2EDBC-5C5A-4CF6-8270-8A3D82E904EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B2EDBC-5C5A-4CF6-8270-8A3D82E904EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B2EDBC-5C5A-4CF6-8270-8A3D82E904EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5990C6F2-CE05-4061-B64E-B161B4DE6AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5990C6F2-CE05-4061-B64E-B161B4DE6AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5990C6F2-CE05-4061-B64E-B161B4DE6AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5990C6F2-CE05-4061-B64E-B161B4DE6AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

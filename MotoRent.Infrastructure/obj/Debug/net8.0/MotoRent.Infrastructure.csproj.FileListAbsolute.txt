@@ -1,0 +1,16 @@
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\bin\Debug\net8.0\MotoRent.Infrastructure.deps.json
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\bin\Debug\net8.0\MotoRent.Infrastructure.dll
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\bin\Debug\net8.0\MotoRent.Infrastructure.pdb
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.Infrastructure.AssemblyInfoInputs.cache
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.Infrastructure.AssemblyInfo.cs
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.Infrastructure.sourcelink.json
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.Infrastructure.dll
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\refint\MotoRent.Infrastructure.dll
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.Infrastructure.pdb
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\ref\MotoRent.Infrastructure.dll
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.Infrastructure.csproj.AssemblyReference.cache
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\bin\Debug\net8.0\MotoRent.Domain.dll
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\bin\Debug\net8.0\MotoRent.Domain.pdb
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.91DE9A7A.Up2Date
