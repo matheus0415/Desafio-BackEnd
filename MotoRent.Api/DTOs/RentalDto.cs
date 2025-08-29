@@ -24,11 +24,4 @@ namespace MotoRent.Api.DTOs
 
 
 
-    public class RentalResponseDto
-    {
-        public decimal TotalAmount { get; set; }
-        public decimal? FineAmount { get; set; }
-        public decimal? AdditionalAmount { get; set; }
-        public string Message { get; set; } = string.Empty;
-    }
 }

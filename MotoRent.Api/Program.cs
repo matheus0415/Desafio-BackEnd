@@ -11,12 +11,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.EnableAnnotations();
-    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
-    {
-        Title = "MotoRent API",
-        Version = "v1",
-        Description = "API for motorcycle rental system"
-    });
 });
 
 builder.Services.AddDbContext<MotoRentDbContext>(options =>

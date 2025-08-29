@@ -38,10 +38,4 @@ namespace MotoRent.Api.DTOs
         public string? LicensePlate { get; set; }
     }
 
-    public class FilterMotorcycleDto
-    {
-        public string? LicensePlate { get; set; }
-        public string? Model { get; set; }
-        public int? Year { get; set; }
-    }
 }

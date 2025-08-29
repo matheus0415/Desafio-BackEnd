@@ -38,11 +38,4 @@ namespace MotoRent.Application.DTOs
         public string? LicensePlate { get; set; }
     }
 
-    public class FilterMotorcycleDto
-    {
-        public Guid? Id { get; set; }
-        public string? LicensePlate { get; set; }
-        public string? Model { get; set; }
-        public int? Year { get; set; }
-    }
 }
