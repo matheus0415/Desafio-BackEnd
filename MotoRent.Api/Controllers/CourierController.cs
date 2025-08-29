@@ -15,7 +15,7 @@ namespace MotoRent.Api.Controllers
     /// CRUD operations for Courier entity.
     /// </summary>
     [ApiController]
-    [Route("[controller]")]
+    [Route("entregadores")]
     public class CourierController : ControllerBase
     {
     private readonly MotoRentDbContext _context;
