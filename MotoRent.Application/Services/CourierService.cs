@@ -16,13 +16,13 @@ namespace MotoRent.Application.Services
             _context = context;
         }
 
-    public async Task<CreateCourierResponse> CreateCourierAsync(CreateCourierDto dto)
+        public async Task<CreateCourierResponse> CreateCourierAsync(CreateCourierDto dto)
         {
             if (!LicenseTypeValidator.IsValid(dto.LicenseType))
                 return new CreateCourierResponse { Success = false, Mensagem = "Dados inválidos" };
 
             if (await _context.Couriers.AnyAsync(e => e.CNPJ == dto.CNPJ))
-                return new CreateCourierResponse { Success = false, Mensagem = "Dados inválidos" };
+                return new CreateCourierResponse { Success = false, Mensagem = "Já existe um Cadastro para este CNPJ" };
 
             if (await _context.Couriers.AnyAsync(e => e.LicenseNumber == dto.LicenseNumber))
                 return new CreateCourierResponse { Success = false, Mensagem = "Dados inválidos" };
@@ -45,12 +45,12 @@ namespace MotoRent.Application.Services
             return new CreateCourierResponse { Success = true };
         }
 
-    public async Task<UpdateLicenseImageResponse> UpdateLicenseImageAsync(
-        Guid id,
-        Stream imageStream,
-        string contentType,
-        Func<string, Task> deleteImageAsync,
-        Func<Stream, string, string, Task<string>> saveImageAsync)
+        public async Task<UpdateLicenseImageResponse> UpdateLicenseImageAsync(
+            Guid id,
+            Stream imageStream,
+            string contentType,
+            Func<string, Task> deleteImageAsync,
+            Func<Stream, string, string, Task<string>> saveImageAsync)
         {
             var courier = await _context.Couriers.FindAsync(id);
             if (courier == null)
