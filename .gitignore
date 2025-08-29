@@ -1,2 +1,5 @@
+# Ignore build output directories
+bin/
+obj/
 # Ignore README.md
 README.md
