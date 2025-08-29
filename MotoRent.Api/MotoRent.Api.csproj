@@ -7,17 +7,30 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="9.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MotoRent.Application\MotoRent.Application.csproj" />
+    <ProjectReference Include="..\MotoRent.Domain\MotoRent.Domain.csproj" />
+    <ProjectReference Include="..\MotoRent.Infrastructure\MotoRent.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <!-- Exclude Portuguese duplicate files to standardize English naming -->
+  <ItemGroup>
+    <Compile Remove="Controllers\EntregadorController.cs" />
+    <Compile Remove="Controllers\LocacaoController.cs" />
+    <Compile Remove="Controllers\MotoController.cs" />
+    <Compile Remove="DTOs\MotoDto.cs" />
+    <Compile Remove="DTOs\LocacaoDto.cs" />
+  <Compile Remove="DTOs\EntregadorDto.cs" />
   </ItemGroup>
 
 </Project>

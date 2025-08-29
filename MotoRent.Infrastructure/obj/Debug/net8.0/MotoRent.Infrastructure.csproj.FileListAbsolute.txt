@@ -14,3 +14,5 @@ C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.Infra
 C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\bin\Debug\net8.0\MotoRent.Domain.dll
 C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\bin\Debug\net8.0\MotoRent.Domain.pdb
 C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.91DE9A7A.Up2Date
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\bin\Debug\net8.0\MotoRent.Infrastructure.runtimeconfig.json
+C:\Repos\Desafio-BackEnd\MotoRent.Infrastructure\obj\Debug\net8.0\MotoRent.Infrastructure.genruntimeconfig.cache
