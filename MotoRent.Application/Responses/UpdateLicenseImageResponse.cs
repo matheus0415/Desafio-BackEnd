@@ -1,4 +1,4 @@
-namespace MotoRent.Application.DTOs.Responses
+namespace MotoRent.Application.Responses
 {
     public class UpdateLicenseImageResponse
     {

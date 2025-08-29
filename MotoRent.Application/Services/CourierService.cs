@@ -1,5 +1,5 @@
 using MotoRent.Application.DTOs;
-using MotoRent.Application.DTOs.Responses;
+using MotoRent.Application.Responses;
 using MotoRent.Domain.Entities;
 using MotoRent.Domain.ValueObjects;
 using MotoRent.Infrastructure.Persistence;
@@ -61,7 +61,6 @@ namespace MotoRent.Application.Services
                 var fileName = $"license_{courier.Id}";
                 var savedName = await saveImageAsync(imageStream, fileName, contentType);
 
-                // Delete previous image if exists
                 if (!string.IsNullOrEmpty(courier.LicenseImage))
                 {
                     await deleteImageAsync(courier.LicenseImage!);

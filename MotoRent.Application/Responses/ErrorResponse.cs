@@ -1,4 +1,4 @@
-namespace MotoRent.Application.DTOs
+namespace MotoRent.Application.Responses
 {
     public class ErrorResponse
     {

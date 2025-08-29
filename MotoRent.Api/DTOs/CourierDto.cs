@@ -35,7 +35,6 @@ namespace MotoRent.Api.DTOs
     public class UpdateLicenseImageDto
     {
         [Required]
-        [FileExtensions(Extensions = "png,bmp", ErrorMessage = "A imagem deve ser PNG ou BMP.")]
-        public IFormFile LicenseImage { get; set; } = null!;
+        public string imagem_cnh { get; set; } = null!;
     }
 }

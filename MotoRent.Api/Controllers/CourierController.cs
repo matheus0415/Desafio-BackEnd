@@ -7,7 +7,7 @@ using MotoRent.Infrastructure.Services;
 using Swashbuckle.AspNetCore.Annotations;
 using MotoRent.Api.DTOs;
 using MotoRent.Application.DTOs;
-using MotoRent.Application.DTOs.Responses;
+using MotoRent.Application.Responses;
 
 namespace MotoRent.Api.Controllers
 {
@@ -35,7 +35,7 @@ namespace MotoRent.Api.Controllers
         /// </summary>
         [HttpPost]
         [SwaggerOperation(Summary = "Cadastrar Entregador", Description = "Creates a new courier in the platform.")]
-        [ProducesResponseType(typeof(CreateCourierResponse), 201)]
+        [ProducesResponseType(201)]
         [ProducesResponseType(typeof(ErrorResponse), 400)]
         public async Task<ActionResult<CourierDto>> Create(CreateCourierDto dto)
         {
@@ -43,7 +43,7 @@ namespace MotoRent.Api.Controllers
             if (response.Success)
                 return Ok(response);
             else
-                return BadRequest(response);
+                return BadRequest(new ErrorResponse { mensagem = response.Mensagem });
         }
 
         /// <summary>
@@ -55,18 +55,30 @@ namespace MotoRent.Api.Controllers
         [ProducesResponseType(typeof(ErrorResponse), 400)]
         public async Task<IActionResult> UpdateLicenseImage(Guid id, UpdateLicenseImageDto dto)
         {
-            using var stream = dto.LicenseImage.OpenReadStream();
+            // Converter base64 para stream
+            byte[] imageBytes;
+            try
+            {
+                imageBytes = Convert.FromBase64String(dto.imagem_cnh);
+            }
+            catch
+            {
+                return BadRequest(new ErrorResponse { mensagem = "Imagem em base64 inválida." });
+            }
+            using var stream = new MemoryStream(imageBytes);
+           
+            var contentType = "image/png";
             UpdateLicenseImageResponse response = await _courierService.UpdateLicenseImageAsync(
                 id,
                 stream,
-                dto.LicenseImage.ContentType,
+                contentType,
                 _storageService.DeleteImageAsync,
                 _storageService.SaveImageAsync
             );
             if (response.Success)
                 return Ok(response);
             else
-                return BadRequest(response);
+                return BadRequest(new ErrorResponse { mensagem = response.Mensagem });
         }
 
     }
