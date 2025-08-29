@@ -30,7 +30,7 @@ namespace MotoRent.Api.Controllers
         /// Cadastrar moto.
         /// </summary>
         [HttpPost]
-        [SwaggerOperation(Summary = "Cadastrar uma nova moto", Description = "Cria uma nova moto na plataforma.")]
+        [SwaggerOperation(Summary = "Cadastrar uma nova moto.")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         public async Task<IActionResult> Cadastrar(CreateMotorcycleDto dto)
@@ -50,7 +50,7 @@ namespace MotoRent.Api.Controllers
         /// Consultar motos existentes.
         /// </summary>
         [HttpGet]
-        [SwaggerOperation(Summary = "Consultar motos existentes", Description = "Retorna todas as motos com filtros opcionais.")]
+        [SwaggerOperation(Summary = "Consultar motos existentes.")]
         [ProducesResponseType(typeof(IEnumerable<MotorcycleListItemDto>), 200)]
         public async Task<ActionResult<IEnumerable<MotorcycleListItemDto>>> Listar([FromQuery] string? placa)
         {
@@ -69,7 +69,7 @@ namespace MotoRent.Api.Controllers
         /// Modificar a placa de uma moto.
         /// </summary>
         [HttpPut("{id}/placa")]
-        [SwaggerOperation(Summary = "Modificar a placa de uma moto", Description = "Atualiza apenas a placa da moto.")]
+        [SwaggerOperation(Summary = "Modificar a placa de uma moto.")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         public async Task<IActionResult> AtualizarPlaca(Guid id, UpdateMotorcycleDto dto)
@@ -85,7 +85,7 @@ namespace MotoRent.Api.Controllers
         /// Buscar moto por ID.
         /// </summary>
         [HttpGet("{id}")]
-        [SwaggerOperation(Summary = "Consultar motos existentes por ID", Description = "Retorna uma moto específica pelo ID.")]
+        [SwaggerOperation(Summary = "Consultar motos existentes por ID.")]
         [ProducesResponseType(typeof(MotorcycleDto), 200)]
         [ProducesResponseType(404)]
         public async Task<ActionResult<MotorcycleDto>> BuscarPorId(Guid id)
@@ -108,7 +108,7 @@ namespace MotoRent.Api.Controllers
         /// Remover uma moto.
         /// </summary>
         [HttpDelete("{id}")]
-        [SwaggerOperation(Summary = "Remover uma moto", Description = "Remove uma moto pelo ID.")]
+        [SwaggerOperation(Summary = "Remover uma moto.")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         public async Task<IActionResult> Delete(Guid id)

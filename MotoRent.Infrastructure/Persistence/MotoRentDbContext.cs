@@ -16,7 +16,6 @@ namespace MotoRent.Infrastructure.Persistence
         {
             base.OnModelCreating(modelBuilder);
 
-            // Courier configurations
             modelBuilder.Entity<Courier>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -25,12 +24,10 @@ namespace MotoRent.Infrastructure.Persistence
                 entity.Property(e => e.LicenseType).IsRequired().HasMaxLength(3);
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
                 
-                // Unique indexes
                 entity.HasIndex(e => e.CNPJ).IsUnique();
                 entity.HasIndex(e => e.LicenseNumber).IsUnique();
             });
 
-            // Motorcycle configurations
             modelBuilder.Entity<Motorcycle>(entity =>
             {
                 entity.HasKey(m => m.Id);
@@ -38,11 +35,9 @@ namespace MotoRent.Infrastructure.Persistence
                 entity.Property(m => m.Model).IsRequired().HasMaxLength(100);
                 entity.Property(m => m.Identifier).IsRequired().HasMaxLength(50);
                 
-                // Unique index for license plate
                 entity.HasIndex(m => m.LicensePlate).IsUnique();
             });
 
-            // Rental configurations
             modelBuilder.Entity<Rental>(entity =>
             {
                 entity.HasKey(l => l.Id);
@@ -52,7 +47,6 @@ namespace MotoRent.Infrastructure.Persistence
                 entity.Property(l => l.AdditionalAmount).HasPrecision(10, 2);
                 entity.Property(l => l.Status).IsRequired().HasMaxLength(20);
                 
-                // Relationships
                 entity.HasOne(l => l.Courier)
                       .WithMany(e => e.Rentals)
                       .HasForeignKey(l => l.CourierId)
@@ -64,14 +58,12 @@ namespace MotoRent.Infrastructure.Persistence
                       .OnDelete(DeleteBehavior.Restrict);
             });
 
-            // MotorcycleEvent configurations
             modelBuilder.Entity<MotorcycleEvent>(entity =>
             {
                 entity.HasKey(em => em.Id);
                 entity.Property(em => em.EventType).IsRequired().HasMaxLength(50);
                 entity.Property(em => em.AdditionalData).HasMaxLength(500);
                 
-                // Relationship
                 entity.HasOne(em => em.Motorcycle)
                       .WithMany()
                       .HasForeignKey(em => em.MotorcycleId)
